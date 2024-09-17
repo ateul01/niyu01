@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing Cost Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="Niyu prints logo.jpeg" alt="Niyu Prints Logo" id="company-logo">
+        <h1>Niyu Prints</h1>
+        <h2>Design and Print Studio</h2>
+    </header>
+    <main>
+        <table>
+            <tr>
+                <td><label for="sides">Printing Type:</label></td>
+                <td>
+                    <select id="sides">
+                        <option value="single">Single Side</option>
+                        <option value="double">Double Side</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="category">Printing Category:</label></td>
+                <td>
+                    <select id="category">
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="quantity">Number of Prints:</label></td>
+                <td><input type="number" id="quantity" min="1" required></td>
+            </tr>
+            <tr>
+                <td><label for="width">Width:</label></td>
+                <td><input type="number" id="width" min="1" required></td>
+            </tr>
+            <tr>
+                <td><label for="height">Height:</label></td>
+                <td><input type="number" id="height" min="1" required></td>
+            </tr>
+            <tr>
+                <td><label for="unit">Unit:</label></td>
+                <td>
+                    <select id="unit">
+                        <option value="mm">Millimeter</option>
+                        <option value="cm">Centimeter</option>
+                        <option value="m">Meter</option>
+                        <option value="inch">Inch</option>
+                    </select>
+                </td>
+            </tr>
+
+            <!-- Process Charging Checkboxes -->
+            <tr>
+                <td><label for="cutting">Cutting Cost:</label></td>
+                <td><input type="checkbox" id="cutting" data-price="10"></td>
+            </tr>
+            <tr>
+                <td><label for="shape-cut">Shape Cut:</label></td>
+                <td><input type="checkbox" id="shape-cut" data-price="15"></td>
+            </tr>
+            <tr>
+                <td><label for="pasting">Pasting:</label></td>
+                <td><input type="checkbox" id="pasting" data-price="5"></td>
+            </tr>
+            <tr>
+                <td><label for="creasing">Creasing:</label></td>
+                <td><input type="checkbox" id="creasing" data-price="2"></td>
+            </tr>
+            <tr>
+                <td><label for="hard-lamination">Hard Lamination:</label></td>
+                <td><input type="checkbox" id="hard-lamination" data-price="40"></td>
+            </tr>
+            <tr>
+                <td><label for="soft-lamination">Soft Lamination:</label></td>
+                <td><input type="checkbox" id="soft-lamination" data-price="10"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button id="calculate">Calculate</button>
+                </td>
+            </tr>
+        </table>
+        <div class="results">
+            <p>Total Cost: <span id="total-cost">0.00</span></p>
+            <p>Sheets Required: <span id="sheets-required">0</span></p>
+            <p>Items Per Sheet: <span id="items-per-sheet">0</span></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

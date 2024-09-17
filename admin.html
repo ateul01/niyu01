@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Niyu Prints</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Portal - Price Management</h1>
+    </header>
+    <main>
+        <form id="admin-form">
+            <h2>Update Prices</h2>
+            <!-- Dynamically populate these inputs with current prices -->
+            <label for="170gsm-single">170 gsm (Single Side):</label>
+            <input type="number" id="170gsm-single" name="170gsm-single" value="24">
+
+            <label for="170gsm-double">170 gsm (Double Side):</label>
+            <input type="number" id="170gsm-double" name="170gsm-double" value="40">
+
+            <!-- Add more categories and prices as necessary -->
+
+            <button type="button" id="update-prices">Update Prices</button>
+        </form>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>
